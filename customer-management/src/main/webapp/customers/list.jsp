@@ -19,13 +19,13 @@ There are ${requestScope.customers.size()} customer(s) in list.
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="c" items="${customers}">
+    <c:forEach var="c" items="${requestScope.customers}">
         <tr>
             <td>
                 <c:out value="${c.id}"/>
             </td>
             <td>
-                <a href="customers/${c.id}">${c.name}</a>
+                <a href="info.jsp?id=${c.id}">${c.name}</a>
             </td>
             <td>
                 <c:out value="${c.email}"/>
